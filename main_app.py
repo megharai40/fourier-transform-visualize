@@ -48,22 +48,28 @@ u=[]
 for i in range(n):
   u.append(np.exp(-0.5*((x[i]-xo)/sig)**2))
 
+#Plot of Wavepacket
 fig2,ax = plt.subplots(figsize=(20, height))
+ax.set_title("Plot of Wavepacket",fontsize=30)
 ax.plot(x1,sum_fx)
-ax.set_xlabel("x")
-ax.set_ylabel("f(x)")
+ax.set_xlabel("x",fontsize=30)
+ax.set_ylabel("f(x)",fontsize=30)
 st.pyplot(fig2)
 
+#Gaussian Spread of Amplitude
 fig,ax = plt.subplots(figsize=(20, height))
+ax.set_title("Gaussian Spread of Amplitude",fontsize=30)
 ax.plot(k,fk)
-ax.set_xlabel("k")
-ax.set_ylabel("A(k)")
+ax.set_xlabel("k",fontsize=30)
+ax.set_ylabel("A(k)",fontsize=30)
 st.pyplot(fig)
 
+#Plot of Gaussian Spread of Position
 fig1,ax = plt.subplots(figsize=(20, height))
+ax.set_title("Gaussian Spread of Position",fontsize=30)
 ax.plot(x,u)
-ax.set_xlabel("x")
-ax.set_ylabel("u(x)")
+ax.set_xlabel("x",fontsize=30)
+ax.set_ylabel("u(x)",fontsize=30)
 st.pyplot(fig1)
 
 
