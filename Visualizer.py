@@ -90,4 +90,5 @@ st.latex(r'''
 where  \sigma_x = \frac{1}{\sigma_k}
 ''')
 st.markdown('u(x) and A(k) are Fourier Transforms of each other.')
+st.markdown('Use the slider for "Spread of k" to vary the value of standard deviation.')
 st.subheader('Made with :heart: by Megha Rai')
