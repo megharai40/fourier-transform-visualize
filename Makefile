@@ -1,2 +1,2 @@
 run:
-    streamlit run main_app.py
+    streamlit run Visualizer.py
