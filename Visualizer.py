@@ -9,7 +9,7 @@ st.title("Fourier Transform Visualizer")
 
 
 num_k = st.sidebar.slider('Number of Superposed Waves',1,1000,1 )
-am = st.sidebar.slider('Maximum k of Superposed Waves',1.0,30.0,10.0 )
+am = 10.0
 sig = st.sidebar.slider('Spread of k (σk)',0.01,10.00,2.00 )  # min: , max: , default: 
 height = st.sidebar.slider('Size of plots',0,20,7)
 
