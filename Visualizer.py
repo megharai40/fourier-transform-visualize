@@ -30,7 +30,7 @@ ak=[]
 fk=[]
 fk1=[]
 for i in range(n):
-  fk.append((sig/np.sqrt(2*np.pi))*np.exp((-0.5*sig**2)*(k[i]-ko)**2)) #from lecture 11
+  fk.append((1/(sig*np.sqrt(2*np.pi)))*np.exp((-0.5*1/(sig**2))*(k[i]-ko)**2)) #from lecture 11
   fk1.append(am*np.exp(-0.5*(k[i]/sig1)**2)) 
 
 #Sum of n number of waves
@@ -49,7 +49,7 @@ for i in range(n):
 
 u=[]
 for i in range(n):
-  u.append(np.exp(-0.5*((x[i]-xo)/sig)**2))
+  u.append(np.exp(-0.5*((x[i]-xo)*sig)**2))
 
 #Plot of Wavepacket
 fig2,ax = plt.subplots(figsize=(20, height))
@@ -90,5 +90,4 @@ st.latex(r'''
 where  \sigma_x = \frac{1}{\sigma_k}
 ''')
 st.markdown('u(x) and A(k) are Fourier Transforms of each other.')
-st.markdown('Use the slider for "Spread of k" to vary the value of standard deviation.')
 st.subheader('Made with :heart: by Megha Rai')
