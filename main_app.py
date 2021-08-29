@@ -90,3 +90,4 @@ st.latex(r'''
 where  \sigma_x = \frac{1}{\sigma_k}
 ''')
 st.markdown('u(x) and A(k) are Fourier Transforms of each other.')
+st.subheader('Made with :heart: by Megha Rai')
