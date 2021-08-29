@@ -1,15 +1,15 @@
 
 import streamlit as st
-import time
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 st.title("Fourier Transform Visualizer")
 #Slider
 
 
 num_k = st.sidebar.slider('Number of Superposed Waves',1,1000,1 )
-am = st.sidebar.slider('Maximum Amplitude of Superposed Waves',1.0,50.0,1.0 )
+am = st.sidebar.slider('Maximum k of Superposed Waves',1.0,30.0,10.0 )
 sig = st.sidebar.slider('Spread of k (sigma)',0.01,10.00,2.00 )  # min: , max: , default: 
 height = st.sidebar.slider('Size of plots',0,20,7)
 
@@ -21,8 +21,8 @@ x=np.linspace(-10.00,10.00,n)
 #for superposed waves
 sig1=2.0
 
-k1=np.linspace(-sig1,sig1,n)
-x1=np.linspace(-50.00,50.00,n)
+k1= np.linspace(-1.8*sig1,1.8*sig1,n)
+x1=np.linspace(-100.00,100.00,n)
 
 sum_fx=[]
 so=0
@@ -31,16 +31,17 @@ fk=[]
 fk1=[]
 for i in range(n):
   fk.append((sig/np.sqrt(2*np.pi))*np.exp((-0.5*sig**2)*(k[i]-ko)**2)) #from lecture 11
-  fk1.append(am*np.exp(-0.5*(k1[i]/sig1)**2))
+  fk1.append(am*np.exp(-0.5*(k[i]/sig1)**2)) 
 
 #Sum of n number of waves
-gaussian = st.checkbox("Gaussian Distribution of Amplitude")
+gaussian = st.checkbox("Gaussian Distribution of k")
+a=np.ones(n)
 if gaussian:
-    k1=fk1
+    a=fk1
 for i in range(n):
   fx=[]
   for j in range(num_k):
-    fx.append(np.sin(k1[j]*x1[i]))
+    fx.append(a[j]*np.sin(k1[j]*x1[i]))
   sum_fx.append(sum(fx))
 
 
