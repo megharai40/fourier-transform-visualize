@@ -1,2 +1,2 @@
 run:
-    streamlit run Visualizer.py
+    streamlit run HeisenbergUncertaintyPrincipleApp.py
