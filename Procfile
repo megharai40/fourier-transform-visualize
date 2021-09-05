@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run Visualizer.py
+web: sh setup.sh && streamlit run HeisenbergUncertaintyPrincipleApp.py
