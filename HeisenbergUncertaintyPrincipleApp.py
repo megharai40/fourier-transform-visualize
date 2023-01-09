@@ -10,8 +10,8 @@ if __name__ == '__main__':
     app = HydraApp(title='Heisenberg Uncertainty Principle',favicon="🐙")
   
     #add all your application classes here
-    app.add_app("Fourier Transform Visualiser", icon="🏠", app=FourierTransformApp())
     app.add_app("Wavepacket Visualiser",icon="🔊", app=wavepacketapp())
-
+    app.add_app("Fourier Transform Visualiser", icon="🏠", app=FourierTransformApp())
+    
     #run the whole lot
     app.run()
