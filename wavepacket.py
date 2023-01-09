@@ -13,7 +13,7 @@ class wavepacketapp(HydraHeadApp):
     #Slider
     st.title("Wavepacket")
     st.markdown('Instructions at bottom of Page')
-    n=1000
+    n=500
     num_k = st.slider('Number of Superposed Waves',1,n,1 )
     am = 10.0
     
