@@ -48,3 +48,4 @@ class wavepacketapp(HydraHeadApp):
     ax.set_ylabel("f(x)",fontsize=30)
     st.pyplot(fig2)
     st.markdown('**_For Wavepacket_** : Increase number of superposed waves using slider. Default values of k are equally spaced between a default range.')
+    st.markdown('*A completely localised wave packet is achieved at around 250 number of superposed waves. After which the pattern of the wavepacket repeats.')
