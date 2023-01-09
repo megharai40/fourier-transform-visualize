@@ -13,7 +13,7 @@ class FourierTransformApp(HydraHeadApp):
     st.title("Fourier Transform Visualizer")
     #Slider
 
-    sig = st.sidebar.slider('Spread of k (σk)',0.01,10.00,5.00 )  # min: , max: , default: 
+    sig = st.select_slider('Spread of k (σk)',0.01,10.00,5.00 )  # min: , max: , default: 
     height = st.sidebar.slider('Size of plots',0,20,7)
 
     ko=0.00
